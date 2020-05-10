@@ -52,7 +52,7 @@ jobs:
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
       run: |-
-        datasette publish now2 til.db \
+        datasette publish heroku  til.db \
           --token $NOW_TOKEN \
           --project xexeo-til \
           --metadata metadata.json \
