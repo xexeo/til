@@ -1,4 +1,4 @@
-#Today I Learneds
+# Today I Learneds
 
 Aprendi sobre isso no Weblog do [Simon Willison](https://simonwillison.net/2020/Apr/20/self-rewriting-readme/), 
 que eu não tenho a menor ideia de quem é.
