@@ -1,6 +1,6 @@
 title: Today I Learned
-about: simonw/til
-about_url: https://github.com/simonw/til
+about: xexeo/til
+about_url: https://github.com/xexeo/til
 databases:
   til:
     queries:
@@ -21,13 +21,13 @@ databases:
           til_fts.rank limit 20
       feed: |-
         SELECT
-          'tag:til.simonwillison.net,2020-04-30:' || path as atom_id,
+          'tag:til.xexeo.net,2020-04-30:' || path as atom_id,
           title as atom_title,
           url as atom_link,
           created_utc as atom_updated,
           rewrite_github_images(render_markdown(body), url) as atom_content_html,
-          'Simon Willison' as atom_author_name,
-          'https://simonwillison.net/' as atom_author_uri
+          'Geraldo Xexéo' as atom_author_name,
+          'https://xexeo.net/' as atom_author_uri
         FROM
           til
         order by
