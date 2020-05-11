@@ -4,7 +4,7 @@ from glob import glob
 MD_FILE_LIST = (y for y in os.walk("."))
 
 with open('README.md', 'w') as f:
-    text = []
+    text = [""]
     with open('til.md','r') as g:
         for line in g:
             f.write(line)
@@ -15,6 +15,7 @@ with open('README.md', 'w') as f:
             levels = len(directory)
             last = directory[-1]
             if files and files[0].find(".md")!=-1:
+                print(last,levels)
                 text.append(' * '+'#' * levels+' %s\n' % last )
                 for file in files:
                     text.append('* [%s](./%s)\n' %
