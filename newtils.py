@@ -4,7 +4,7 @@ import git
 import pathlib
 import sys
 
-root = pathlib.Path(__file__).parent.resolve()
+root = str(pathlib.Path(__file__).parent.resolve())
 
 
 MD_FILE_LIST = (y for y in os.walk(root))
