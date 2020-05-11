@@ -18,7 +18,7 @@ with open('README.md', 'w') as f:
                 print(last,levels)
                 text.append(' * '+'#' * levels+' %s\n' % last )
                 for file in files:
-                    text.append('* [%s](./%s)\n' %
+                    text.append('- [%s](./%s)\n' %
                         ( file.replace('.md', '').replace('_',' '),
                           m_file[0].replace(os.sep, '/')[2:]+"/"+file.replace(os.sep, '/')
                         )
