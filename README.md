@@ -8,7 +8,7 @@ Ele diz que [John Branchaud](https://github.com/jbranchaud/til) explica que um T
 > A collection of concise write-ups on small things I learn day to day across a variety
 > of languages and technologies. These are things that don’t really warrant a full blog post.
 # Index
-*[outlines](./latex/outlines.md)
-*[vazio](./latex/vazio.md)
- * ###beamer
-*[show slide number and total](./latex/beamer/show_slide_number_and_total.md)
+* [outlines](./latex/outlines.md)
+* [vazio](./latex/vazio.md)
+ * ### beamer
+* [show slide number and total](./latex/beamer/show_slide_number_and_total.md)
