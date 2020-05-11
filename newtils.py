@@ -14,7 +14,7 @@ def calculate_level(levels,fila_dirs):
 MD_FILE_LIST = (y for y in os.walk(root))
 
 with open(root+'/README.md', 'w') as f:
-    text = [""]
+    text = []
     with open(root+'/til.md','r') as g:
         for line in g:
             f.write(line)
