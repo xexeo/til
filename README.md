@@ -8,6 +8,8 @@ Ele diz que [John Branchaud](https://github.com/jbranchaud/til) explica que um T
 > A collection of concise write-ups on small things I learn day to day across a variety
 > of languages and technologies. 
 # Index
+- [til](.//home/runner/work/til/til/til.md)
+- [README](.//home/runner/work/til/til/README.md)
 ## GitHub
 - [How to use Microsoft Word with GitHub](./GitHub/How%20to%20use%20Microsoft%20Word%20with%20GitHub.md)
 ### Actions
