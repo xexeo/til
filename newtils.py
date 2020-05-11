@@ -10,6 +10,9 @@ root = str(pathlib.Path(__file__).parent.resolve())
 def calculate_level(levels,fila_dirs):
     return min(levels-directory_levels_in_git_run-len(fila_dirs)+1,3)
 
+def url_maker(path,file):
+    return path.replace(" ","%20")+"/"+file.replace(os.sep, '/').replace(" "
+                ,"%20")
 
 MD_FILE_LIST = (y for y in os.walk(root))
 
@@ -40,7 +43,7 @@ with open(root+'/README.md', 'w') as f:
                     #text.append("The path is: "+the_path+"\n")
                     text.append('- [%s](./%s)\n' %
                         ( file.replace('.md', '').replace('_',' '),
-                          the_path+"/"+file.replace(os.sep, '/')
+                          url_maker(the_path,file)
                         )
                     )
             elif len(m_file[1])==0:
