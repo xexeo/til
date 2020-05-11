@@ -14,21 +14,24 @@ with open(root+'/README.md', 'w') as f:
     with open(root+'/til.md','r') as g:
         for line in g:
             f.write(line)
+    fila_dirs = []
     for m_file in MD_FILE_LIST:
         # processa o diretório
             directory = m_file[0].split(os.sep)
             files = m_file[2]
             levels = len(directory)
             last = directory[-1]
+            fila_dirs.append(last)
 
-            
             the_temp_path = str(m_file[0].replace(os.sep,'/'))
             #text.append(the_temp_path+"\n")
             the_path = the_temp_path.replace("/home/runner/work/til/til/",'')
             #text.append(the_path+"\n")
 
             if files and files[0].find(".md")!=-1:
-                text.append(' * '+'#' * min(levels-5,3)+' %s\n' % last )
+                while fila_dirs:
+                    text.append(' * '+'#' * min(levels-5,3)+' %s\n' %
+                                fila_dirs.pop(0))
                 for file in files:
                     #text.append("The path is: "+the_path+"\n")
                     text.append('- [%s](./%s)\n' %
@@ -36,6 +39,8 @@ with open(root+'/README.md', 'w') as f:
                           the_path+"/"+file.replace(os.sep, '/')
                         )
                     )
+            elif len(m_file[1])==0:
+                fila_dirs = []
 
     text[0] = "# Index\n"
     f.writelines(text)
