@@ -8,8 +8,6 @@ root = pathlib.Path(__file__).parent.resolve()
 
 
 MD_FILE_LIST = (y for y in os.walk(root))
-commits = reversed(list(repo.iter_commits(ref)))
-
 
 with open(root+'/README.md', 'w') as f:
     text = [""]
