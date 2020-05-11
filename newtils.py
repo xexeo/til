@@ -30,6 +30,12 @@ def find_sub_in_list(a_list,a_sub_string):
             return True
     return False
 
+def fix_path(apath):
+    the_temp_path = str(apath.replace(os.sep,'/'))
+    the_path = the_temp_path.replace("/home/runner/work/til/til",'')
+    return(the_path)
+
+
 # this gives a list of 3-plets:
 # first is path (almost a string) with directory - always present
 # second is list of subdirs - can be empty at leaves
@@ -60,9 +66,9 @@ with open(root+'/README.md', 'w') as f:
             # need the files
             files = m_file[2]
 
-            # did that to find bug, left as it is not so heavy
-            the_temp_path = str(m_file[0].replace(os.sep,'/'))
-            the_path = the_temp_path.replace("/home/runner/work/til/til/",'')
+
+            the_path = fix_path(m_file[0])
+
 
             # we check for one .md file, but can have other files
             # if there is one, must process the list
