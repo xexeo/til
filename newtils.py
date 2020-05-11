@@ -42,7 +42,7 @@ with open(root+'/README.md', 'w') as f:
                 for file in files:
                     #text.append("The path is: "+the_path+"\n")
                     text.append('- [%s](./%s)\n' %
-                        ( file.replace('.md', '').replace('_',' '),
+                        ( file.replace('.md', ''),
                           url_maker(the_path,file)
                         )
                     )
