@@ -11,7 +11,7 @@ MD_FILE_LIST = (y for y in os.walk(root))
 
 with open(root+'/README.md', 'w') as f:
     text = [""]
-    with open(root+'til.md','r') as g:
+    with open(root+'/til.md','r') as g:
         for line in g:
             f.write(line)
     for m_file in MD_FILE_LIST:
