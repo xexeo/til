@@ -3,7 +3,7 @@
 # How to install
 
 * it comes with MiKTeX
-* you need to install Perl (strawberry?)
+* you need to install Perl (strawberry?), just google Perl
 
 # How to setup
 
