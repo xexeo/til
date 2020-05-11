@@ -37,7 +37,7 @@ with open(root+'/README.md', 'w') as f:
 
             if files and files[0].find(".md")!=-1:
                 while fila_dirs:
-                    text.append(' * '+'#' * calculate_level(levels,fila_dirs)
+                    text.append('#' * calculate_level(levels,fila_dirs)
                                      +' %s\n' % fila_dirs.pop(0))
                 for file in files:
                     #text.append("The path is: "+the_path+"\n")
