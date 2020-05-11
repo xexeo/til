@@ -20,4 +20,4 @@ Ele diz que [John Branchaud](https://github.com/jbranchaud/til) explica que um T
 - [How to install and setup latexmk](./LaTeX/latexmk/How_to_install_and_setup_latexmk.md)
  * ## Roll20
  * ### Character Sheet
-- [How to create a dice button](./Roll20/Character Sheet/How_to_create_a_dice_button.md)
+- [How to create a dice button](./Roll20/Character%20Sheet/How_to_create_a_dice_button.md)
