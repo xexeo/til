@@ -1,7 +1,7 @@
 # Today I Learneds
 
 Learned about TILs [Simon Willison's](https://simonwillison.net/2020/Apr/20/self-rewriting-readme/), Weblog 
-He pointed to [John Branchaud](https://github.com/jbranchaud/til) explainin a TIL:
+He pointed to [John Branchaud](https://github.com/jbranchaud/til) explaining a TIL:
 
 > A collection of concise write-ups on small things I learn day to day across a variety
 > of languages and technologies. 
