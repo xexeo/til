@@ -25,10 +25,11 @@ def url_maker(path,file):
 
 # in a list of file names, seek one with .md in name
 def find_sub_in_list(a_list,a_sub_string):
-    for s in a_list:
-        if a_sub_string in s:
-            return True
-    return False
+    return any(a_sub_string in s for s in a_list)
+#    for s in a_list:
+#        if a_sub_string in s:
+#            return True
+#    return False
 
 def fix_path(apath):
     the_temp_path = str(apath.replace(os.sep,'/'))
