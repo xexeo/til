@@ -20,15 +20,17 @@ with open(root+'/README.md', 'w') as f:
             files = m_file[2]
             levels = len(directory)
             last = directory[-1]
+
             # https://github.com/xexeo/til/blob/master/ome/runner/work/til/til/latex/beamer/How_to_show_slide_number_and_total.md
-            the_path = m_file[0].replace("\/ome\/runner\/work\/til\/til","")
-            text.append(the_path)
+            the_path = m_file[0].replace(os.sep, '/').replace("/ome/runner/work/til/til","")[2:]
+            
             if files and files[0].find(".md")!=-1:
                 text.append(' * '+'#' * min(levels-5,3)+' %s\n' % last )
                 for file in files:
+                    #text.append("The path is: "+the_path+"\n")
                     text.append('- [%s](./%s)\n' %
                         ( file.replace('.md', '').replace('_',' '),
-                          the_path.replace(os.sep, '/')[2:]+"/"+file.replace(os.sep, '/')
+                          the_path+"/"+file.replace(os.sep, '/')
                         )
                     )
 
