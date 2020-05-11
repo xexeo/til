@@ -4,7 +4,11 @@ import git
 import pathlib
 import sys
 
+directory_levels_in_git_run = 5
 root = str(pathlib.Path(__file__).parent.resolve())
+
+def calculate_level(levels,fila_dirs):
+    return min(levels-directory_levels_in_git_run-len(fila_dirs)+1,3)
 
 
 MD_FILE_LIST = (y for y in os.walk(root))
@@ -30,8 +34,8 @@ with open(root+'/README.md', 'w') as f:
 
             if files and files[0].find(".md")!=-1:
                 while fila_dirs:
-                    text.append(' * '+'#' * min(levels-5,3)+' %s\n' %
-                                fila_dirs.pop(0))
+                    text.append(' * '+'#' * calculate_level(levels,fila_dirs)
+                                     +' %s\n' % fila_dirs.pop(0))
                 for file in files:
                     #text.append("The path is: "+the_path+"\n")
                     text.append('- [%s](./%s)\n' %
