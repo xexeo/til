@@ -20,6 +20,8 @@ Check the TIL about Actions in GitHub to learn how I did it.
 - [How to use Microsoft Word with GitHub](.//GitHub/How%20to%20use%20Microsoft%20Word%20with%20GitHub.md)
 ### Actions
 - [How to set up an action when push](.//GitHub/Actions/How%20to%20set%20up%20an%20action%20when%20push.md)
+## Colors
+- [How to pick colors for games and other applications](.//Colors/How%20to%20pick%20colors%20for%20games%20and%20other%20applications.md)
 ## LaTeX
 - [How to make deep nested item lists without cascading begin itemize](.//LaTeX/How%20to%20make%20deep%20nested%20item%20lists%20without%20cascading%20begin%20itemize.md)
 ### beamer
