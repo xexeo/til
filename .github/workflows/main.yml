@@ -46,7 +46,7 @@ jobs:
     # Update README
     - name: Update README
       run: |-
-        python newtil.py --rewrite
+        python newtils.py --rewrite
         cat README.md
 
     - name: Commit and push if README changed
