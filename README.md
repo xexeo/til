@@ -9,7 +9,7 @@ Ele diz que [John Branchaud](https://github.com/jbranchaud/til) explica que um T
 > of languages and technologies. These are things that don’t really warrant a full blog post.
 # Index
  * ## GitHub
-- [How to use Microsoft Word with GitHub](./GitHub/How_to_use_Microsoft_Word_with_GitHub.md)
+- [How to use Microsoft Word with GitHub1](./GitHub/How_to_use_Microsoft_Word_with_GitHub1.md)
  * ### Actions
 - [How to set up an action when commit push](./GitHub/Actions/How_to_set_up_an_action_when_commit_push.md)
  * ## LaTeX1
