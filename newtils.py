@@ -22,7 +22,7 @@ with open(root+'/README.md', 'w') as f:
             last = directory[-1]
             # https://github.com/xexeo/til/blob/master/ome/runner/work/til/til/latex/beamer/How_to_show_slide_number_and_total.md
             the_path = m_file[0].replace("/ome/runner/work/til/til","")
-            if files and files[0].find(".md")!=-1:
+            if files and files[0].find(".md")!=-1: 
                 text.append(' * '+'#' * min(levels-5,3)+' %s\n' % last )
                 for file in files:
                     text.append('- [%s](./%s)\n' %

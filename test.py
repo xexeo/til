@@ -3,6 +3,8 @@ from glob import glob
 import pathlib
 import sys
 
-root = pathlib.Path(__file__).parent.resolve()
+MD_FILE_LIST = (y for y in os.walk("."))
 
-print(root)
+for m_file in MD_FILE_LIST:
+  print(m_file)
+  print(m_file[0])
