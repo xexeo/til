@@ -21,7 +21,7 @@ with open(root+'/README.md', 'w') as f:
             levels = len(directory)
             last = directory[-1]
 
-            # https://github.com/xexeo/til/blob/master/ome/runner/work/til/til/latex/beamer/How_to_show_slide_number_and_total.md
+            
             the_temp_path = str(m_file[0].replace(os.sep,'/'))
             #text.append(the_temp_path+"\n")
             the_path = the_temp_path.replace("/home/runner/work/til/til/",'')
