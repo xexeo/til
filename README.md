@@ -25,6 +25,7 @@ Check the TIL about Actions in GitHub to learn how I did it.
 ## LaTeX
 - [How to make deep nested item lists without cascading begin itemize](.//LaTeX/How%20to%20make%20deep%20nested%20item%20lists%20without%20cascading%20begin%20itemize.md)
 ### beamer
+- [How to number figures in beamer](.//LaTeX/beamer/How%20to%20number%20figures%20in%20beamer.md)
 - [How to show slide number and total slides](.//LaTeX/beamer/How%20to%20show%20slide%20number%20and%20total%20slides.md)
 ### latexmk
 - [How to install and setup latexmk](.//LaTeX/latexmk/How%20to%20install%20and%20setup%20latexmk.md)
