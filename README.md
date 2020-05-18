@@ -17,6 +17,7 @@ Check the TIL about Actions in GitHub to learn how I did it.
 - [til](.//til.md)
 - [README](.//README.md)
 ## GitHub
+- [List of Miscellaneous Interesting Actions](.//GitHub/List%20of%20Miscellaneous%20Interesting%20Actions.md)
 - [How to use Microsoft Word with GitHub](.//GitHub/How%20to%20use%20Microsoft%20Word%20with%20GitHub.md)
 ### Actions
 - [How to set up an action when push](.//GitHub/Actions/How%20to%20set%20up%20an%20action%20when%20push.md)
