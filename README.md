@@ -17,6 +17,7 @@ Check the TIL about Actions in GitHub to learn how I did it.
 - [til](.//til.md)
 - [README](.//README.md)
 ## GitHub
+- [How to remove committed files from Git version control](.//GitHub/How%20to%20remove%20committed%20files%20from%20Git%20version%20control.md)
 - [List of Miscellaneous Interesting Actions](.//GitHub/List%20of%20Miscellaneous%20Interesting%20Actions.md)
 - [How to use Microsoft Word with GitHub](.//GitHub/How%20to%20use%20Microsoft%20Word%20with%20GitHub.md)
 ### Actions
