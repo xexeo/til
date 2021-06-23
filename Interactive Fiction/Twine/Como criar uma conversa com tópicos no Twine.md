@@ -1,5 +1,7 @@
 # O diálogo
 
+Um exemplo em html está em (ConversacomTópicos.html)[ConversacomTópicos.html]
+
 ## Criando os links
 
 Em uma sala que rode no início do jogo, coloque o seguinte código:
