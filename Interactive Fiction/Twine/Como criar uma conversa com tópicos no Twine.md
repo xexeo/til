@@ -1,6 +1,6 @@
 # O diálogo
 
-Um exemplo em html está em [ConversacomTópicos.html](ConversacomTópicos.html)
+Um exemplo está em [ConversacomTópicos.html](ConversacomTópicos.html)
 
 Este exemplo foi baseado em: [http://twine.analytical-engine.co.uk/Cookbook.html](http://twine.analytical-engine.co.uk/Cookbook.html)
 
@@ -15,7 +15,7 @@ Uma alternativa a esse exemplo, aparentemente anterior, aparece em: [http://twin
 2.3. uma sala de saída (que pode ser a mesma sala de entrada (onde não acontece nada, mas deve existir).
 3. A conversa na prática chama a mesma sala a cada passo
 
-
+Essa conversa foi criada com o seguinte desenho:
 
 ## Criando os links
 
@@ -29,7 +29,6 @@ Em uma sala que rode no início do jogo, coloque o seguinte código:
 (set: $dtmtalk to (macro: str-type _ps , array-type _opts ,
 [(output-data: (joined: ", " , ...(altered: _op via '(link: "'+_op+'")[(set: $__option to "'+_op+'")(goto: "'+_ps+'")]' , ..._opts)))]))
 ```
-
 
 ## Fazendo a conversa
 A ideia é que você começa com apenas um pouco de opções, mas a medida que vai conversando, aumenta essas opções.
@@ -77,7 +76,6 @@ Cada conteúdo é uma array (a:), como 4 itens: um texto que responde à chave, 
 
 Este código de aparecer em qualquer momento antes de entrar na sala da conversação. Eu recomendo ele aparece em uma sala de inicialização do jogo, que é imediatamente pulada com (goto:).
 
-
 ## Antes de conversar
 
 Antes de ir para a conversa, você deve ter um código preparando a conversa
@@ -88,8 +86,6 @@ $topics contém os tópicos da conversa
 $__conv contém a conversação
 $__option contém a opção escolhida inicialemnte
 $__endpassage contém a sala que se deve ir no final da conversa
-
-
 
 ```
 O Balcão do Caixa tem, no momento, uma pessoa cuidando dele. Você vê Carla, que está embrulhando um jogo que um cliente acaba de comprar para presente.
@@ -134,3 +130,5 @@ Or you can (link-repeat: "end the conversation")[
 [[chega de conversa->Caixa]]
 ]
 ```
+
+
