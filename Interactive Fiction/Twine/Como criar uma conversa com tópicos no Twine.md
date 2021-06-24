@@ -1,8 +1,26 @@
 # O diálogo
 
-Um exemplo em html está em (ConversacomTópicos.html)[ConversacomTópicos.html]
+Um exemplo em html está em [ConversacomTópicos.html](ConversacomTópicos.html)
+
+Este exemplo foi baseado em: [http://twine.analytical-engine.co.uk/Cookbook.html](http://twine.analytical-engine.co.uk/Cookbook.html)
+
+Uma alternativa a esse exemplo, aparentemente anterior, aparece em: [http://twinery.org/questions/10457/using-datamaps-conversation-javascript-display-passages](http://twinery.org/questions/10457/using-datamaps-conversation-javascript-display-passages)
+
+## Estrutura básica
+
+1. Temos uma função que deve ser declarada no início do jogo
+2. A conversa precisa de 3 estágios, normalmente salas, 
+2.1. a sala anterior que chama a conversa, 
+2.2. a sala da conversa (onde "sala" é apenas um conceito do Twine, pode ser descrita como falando com uma pessoa no mesmo ambiente da sala da sala anterior)  e
+2.3. uma sala de saída (que pode ser a mesma sala de entrada (onde não acontece nada, mas deve existir).
+3. A conversa na prática chama a mesma sala a cada passo
+
+
 
 ## Criando os links
+
+Para ajudar a criação de várias conversas, consegui separar uma função, que mostra as opções para clicar.
+Ele pode ser reconstruída (com outro nome) se for necessário mostrar as opções de outra forma.
 
 Em uma sala que rode no início do jogo, coloque o seguinte código:
 
@@ -12,9 +30,25 @@ Em uma sala que rode no início do jogo, coloque o seguinte código:
 [(output-data: (joined: ", " , ...(altered: _op via '(link: "'+_op+'")[(set: $__option to "'+_op+'")(goto: "'+_ps+'")]' , ..._opts)))]))
 ```
 
+
 ## Fazendo a conversa
 A ideia é que você começa com apenas um pouco de opções, mas a medida que vai conversando, aumenta essas opções.
-A estrutura é a seguinte: a variável $bartender guarda um datamap, que é uma espécie de lista na forma chave/conteúdo.
+
+Temos então duas variáveis, uma que guarda a conversa, outra que guarda o que sabemos.
+
+A conversa é guardada em um datamap (datamap:), que é uma espécie de lista na forma chave/conteúdo.
+No nosso exemplo, chamamos a variávei de $bartender.
+
+A chave é um tópico possível em algum momento da conversa. Para a conversa com o bartender, eles são: castle, smithing, soldiers, brother, ...
+
+Já o o conteúdo é dividio em 3 partes, e é guardado em uma array (a:). 
+
+O primeiro item contém texto (de qualquer tamanho) que aparece quando o assunto (a chave) é clicado, é a resposta do personagem com que se conversa. 
+
+O segundo item contém assuntos que são adicionados, isto é, o que foi aprendido na conversação)
+
+O terceiro item contém um "efeito" no jogo.
+
 Essa código pode ficar em qualquer lugar antes do próximo código
 
 ```
@@ -32,17 +66,30 @@ Essa código pode ficar em qualquer lugar antes do próximo código
 )
 ```
 
-Além disso você precisa de criar a lista de tópicos iniciais para essa conversa:
+A lista de tópicos previamente conhecidos é também necessária. No nosso exemplo ela se chamar $topics_bartender
+
+Cada conteúdo é uma array (a:), como 4 itens: um texto que responde à chave, uma array com a nova chave e um item vazio (isso é modificado pelo programa mais tarde)
+
 
 ```
 (set: $topics_bartender to (a: "castle", "smithing", "soldiers"))
 ```
 
-Cada conteúdo é uma array (a:), como 4 itens: um texto que responde à chave, uma array com a nova chave e um item vazio (isso é modificado pelo programa mais tarde)
+Este código de aparecer em qualquer momento antes de entrar na sala da conversação. Eu recomendo ele aparece em uma sala de inicialização do jogo, que é imediatamente pulada com (goto:).
 
-## Antes da conversando
+
+## Antes de conversar
+
 Antes de ir para a conversa, você deve ter um código preparando a conversa
-O importante são os 4 set: que serão usados na conversa
+
+O importante são os 4 (set:) que dão valor as variáveis que serão usados na conversa
+
+$topics contém os tópicos da conversa
+$__conv contém a conversação
+$__option contém a opção escolhida inicialemnte
+$__endpassage contém a sala que se deve ir no final da conversa
+
+
 
 ```
 O Balcão do Caixa tem, no momento, uma pessoa cuidando dele. Você vê Carla, que está embrulhando um jogo que um cliente acaba de comprar para presente.
@@ -58,9 +105,12 @@ Você pode [[falar com a responsável pela caixa->Conversa com a caixa]]:
 ## A conversa
 
 Fazer uma sala só para a conversando
-Esse é um exemplo
 
+O código a seguir tem 3 partes. A primeira é o processamento das variáveis, a segunda é a impressão das condições atuais.
 
+Veja que o terceiro item da conversação não é muito importante aqui, é só uma impressão a mais.
+
+Há uma questão importante: é necessário mudar o estado da lista de tópicos original $topics_bartender. 
 
 ```
 <!-- can this be macrofied? -->
