@@ -6,6 +6,9 @@ Este exemplo foi baseado em: [http://twine.analytical-engine.co.uk/Cookbook.html
 
 Uma alternativa a esse exemplo, aparentemente anterior, aparece em: [http://twinery.org/questions/10457/using-datamaps-conversation-javascript-display-passages](http://twinery.org/questions/10457/using-datamaps-conversation-javascript-display-passages)
 
+![mapa.png](mapa.png)
+
+
 ## Estrutura básica
 
 1. Temos uma função que deve ser declarada no início do jogo
