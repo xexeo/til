@@ -11,7 +11,7 @@ other confusing stuff. I just process the folders and create the README from til
 
 Check the TIL about Actions in GitHub to learn how I did it.
 
-
+*Some TILs can be in Portuguese*
 
 # Index
 - [README](.//README.md)
