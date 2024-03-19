@@ -26,4 +26,6 @@ It does not work with Powerpoint, pandoc can´t read .pptx files.
 There are other solutions for Excel files.
 
 [Long version by Martin Fenner, since 2014](https://blog.martinfenner.org/2014/08/25/using-microsoft-word-with-git/)
-and I never knew about it.
+and I never knew about it. This link was dead the last time I tried.
+
+It seems that [this text](https://blog.front-matter.io/posts/using-microsoft-word-with-git/) explain it more.
