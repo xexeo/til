@@ -5,11 +5,11 @@
 * Create a file .gitattributes in the root folder of the git project
 
 ```
-# .gitattributes file in root folder of your git project
+# .gitattributes file in **root folder of your git project**
 *.docx diff=pandoc
 ```
 
-* Change the .gitconfig in your home folder, including the following lines
+* Change the .gitconfig in your **home folder**, usually is C:\Users\YourName, including the following lines
 ```
 # .gitconfig file in your home folder
 [diff "pandoc"]
